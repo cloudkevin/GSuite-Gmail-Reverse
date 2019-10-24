@@ -1,0 +1,25 @@
+{
+   "browser_action": {
+      "default_icon": {
+         "48": "img/icon_48.png"
+      },
+      "default_title": "Gmail reverse conversation"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "js/gmail-reverse-conversation.js" ],
+      "matches": [ "https://mail.google.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "The addon which reverse emails in conversation view.",
+   "icons": {
+      "24": "img/icon_24.png",
+      "48": "img/icon_48.png"
+   },
+   "key": "<<key>>",
+   "manifest_version": 2,
+   "name": "Gmail reverse conversation",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.7",
+   "web_accessible_resources": [ "js/gmail-reverse-conversation.js", "img/*.png", "css/gmail-reverse-conversation.css" ]
+}
